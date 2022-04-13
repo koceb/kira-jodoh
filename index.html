@@ -12,43 +12,22 @@
     <title>Kira Jodoh!</title>
   </head>
   <body>
-
-    <script>
-        function random(){
-
-            var name1 = document.getElementById("yourname").value;
-            var name2 = document.getElementById("theirname").value;
-            var random = Math.floor((Math.random() * 100) + 1);
-
-            document.getElementById("rand").innerHTML = name1 + " dan " + name2 + " = " +random + "% " + " harapan untuk kamu bersama :) ";
-
-                if(random<=0 || random<=20){
-                document.getElementById("statement").innerHTML = "Alamak better ko cari lain :(";
-                }
-                else if(random<=21 || random<=40){
-                    document.getElementById("statement").innerHTML = "Macam ada harapan";
-                }
-                else if(random<=41 || random<=60){
-                    document.getElementById("statement").innerHTML = "Mungkin lah";
-                }
-                else if(random<=61 || random<=80){
-                    document.getElementById("statement").innerHTML = "Weh dia pun suka kau";
-                }
-                else if(random<=81 || random<=100){
-                    document.getElementById("statement").innerHTML = "Besok kamu kahwin! Tahniah";
-                }
-
-
-        }
-    </script>
+  
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.png" alt="" width="35" height="35" class="d-inline-block align-text-top">
+        </a>
+      </div>
+    </nav>
     
     <h1>Kira seberapa dekat jodoh ko dengan dia</h1>
+    <img class="logo" src="assets/love.png" width="35" height="35">
 
-    
-    
+
     <div id="form" class="text-center mb-3 d-flex flex-column justify-content-center align-items-center">
 
-
+        
         <form name="form">
             <div class="mb-3">
               <label for="yourname" class="form-label">Nama kau:</label>
@@ -60,7 +39,7 @@
             </div>
             
             <!--<button class="btn btn-primary d-block w-100 mt-4" onclick="random()" type="button" value="calculate">Calculate</button>-->
-            <input class="btn btn-dark d-block w-100 mt-4" type ="button" onclick="random()" value ="Kira"/><br>
+            <input id="getData" class="btn btn-dark d-block w-100 mt-4" type ="button" onclick="random()" value ="Kira"/><br>
 
             <div class="mb-3">
                 
@@ -69,10 +48,15 @@
 
                 <p id="rand">Nah result ko</p>
                 <p id="statement"></p>
+                <h6>Nasihat random hari ini:</h6>
+                <p id="nasihat"></p>
             </div>
             
           </form>
+          
     </div>
+
+    
     
 
     <footer>
@@ -97,19 +81,42 @@
         </a>-->
     </div>
     <hr class="mt-5">
-    <p class="text-center mb-0">Copyright &copy; 2022 Koceb</p>
+    <p class="text-center mb-0">Copyright &copy; 2022 Koceb v1.0.1</p>
     </div>
 </footer>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script>
+    function random(){
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+        var name1 = document.getElementById("yourname").value;
+        var name2 = document.getElementById("theirname").value;
+        var random = Math.floor((Math.random() * 100) + 1);
+
+        document.getElementById("rand").innerHTML = name1 + " dan " + name2 + " = " +random + "% " + " harapan untuk kamu bersama :) ";
+
+            if(random<=0 || random<=20){
+            document.getElementById("statement").innerHTML = "Alamak better ko cari lain :(";
+            }
+            else if(random<=21 || random<=40){
+                document.getElementById("statement").innerHTML = "Macam ada harapan";
+            }
+            else if(random<=41 || random<=60){
+                document.getElementById("statement").innerHTML = "Mungkin lah";
+            }
+            else if(random<=61 || random<=80){
+                document.getElementById("statement").innerHTML = "Weh dia pun suka kau";
+            }
+            else if(random<=81 || random<=100){
+                document.getElementById("statement").innerHTML = "Besok kamu kahwin! Tahniah";
+            }
+
+
+    }
+</script>
+    
   </body>
 </html>
