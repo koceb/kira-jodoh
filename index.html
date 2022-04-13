@@ -41,39 +41,49 @@
 
         }
     </script>
+
+
     
     <h1>Kira seberapa dekat jodoh ko dengan dia</h1>
 
     
     
-    <div id="form" class="text-center mb-3 d-flex flex-column justify-content-center align-items-center">
+    <div id="form" class="text-center mb-3 py-5 d-flex flex-column justify-content-center align-items-center">
 
+      <div class="container mt-4 " >
 
-        <form name="form">
-            <div class="mb-3">
-              <label for="yourname" class="form-label">Nama kau:</label>
-              <input type="text" class="form-control" id="yourname" placeholder="isi nama ko" onfocus="this.value = ''" required>
-            </div>
-            <div class="mb-3">
-              <label for="theirname" class="form-label">Nama crush kau:</label>
-              <input type="text" class="form-control" id="theirname" placeholder="isi nama si dia" onfocus="this.value = ''" required>
-            </div>
-            
-            <!--<button class="btn btn-primary d-block w-100 mt-4" onclick="random()" type="button" value="calculate">Calculate</button>-->
-            <input class="btn btn-dark d-block w-100 mt-4" type ="button" onclick="random()" value ="Kira"/><br>
-
-            <div class="mb-3">
-                
-               <!-- <label for="rand" class="form-label">Result:</label>
-                <input class="form-control" type="text" id="rand" readonly="readonly"/>-->
-
-                <p id="rand">Nah result ko</p>
-                <p id="statement"></p>
-            </div>
-            
-          </form>
+        <div class="card justify-content-center px-5" >
+          <div class="card-body">
+            <form name="form">
+              <div class="mb-3">
+                <label for="yourname" class="form-label">Nama kau:</label>
+                <input type="text" class="form-control" id="yourname" placeholder="isi nama ko" onfocus="this.value = ''" required>
+              </div>
+              <div class="mb-3">
+                <label for="theirname" class="form-label">Nama crush kau:</label>
+                <input type="text" class="form-control" id="theirname" placeholder="isi nama si dia" onfocus="this.value = ''" required>
+              </div>
+              
+              <!--<button class="btn btn-primary d-block w-100 mt-4" onclick="random()" type="button" value="calculate">Calculate</button>-->
+              <input class="btn btn-dark d-block w-100 mt-4" type ="button" onclick="random()" value ="Kira"/><br>
+      
+              <div class="mb-3">
+                  
+                 <!-- <label for="rand" class="form-label">Result:</label>
+                  <input class="form-control" type="text" id="rand" readonly="readonly"/>-->
+      
+                  <p id="rand">Nah result ko</p>
+                  <p id="statement"></p>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+        
     </div>
     
+   
 
     <footer>
     <div class="d-flex justify-content-center sosmed">
